@@ -1,3 +1,7 @@
 from etl import web_scraping_booklist
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium import webdriver
 
-web_scraping_booklist()
+driver = webdriver.Chrome(ChromeDriverManager().install())
+
+web_scraping_booklist(driver)
